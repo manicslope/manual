@@ -5,3 +5,7 @@ http://help.ubuntu.ru/wiki/%D1%80%D1%83%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%8
 
 Конфиг vim
 /usr/share/vim/vimrc
+
+Конфиг git
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
