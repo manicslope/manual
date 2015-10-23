@@ -18,3 +18,7 @@ WINEARCH=win32 WINEPREFIX=~/win32 winetricks -q msxml3 dotnet40 corefonts
 #
 Копирование всех файло кроме одного
 ls folder1 | grep -v file1 | xargs cp folder2 (folder1 - Исходная, folder2 - конечная, file1 - игнорируемый файл)
+#
+Замена подстроки в vim
+:{пределы}s/{что заменяем}/{на что заменяем}/{опции}
+:%s/float(dmg)/dmg
