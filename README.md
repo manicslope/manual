@@ -22,3 +22,6 @@ ls folder1 | grep -v file1 | xargs cp folder2 (folder1 - Исходная, folde
 Замена подстроки в vim
 :{пределы}s/{что заменяем}/{на что заменяем}/{опции}
 :%s/float(dmg)/dmg
+#
+Распаковка архива tar.gz
+tar -xvf /path/to/archive.tar.gz
