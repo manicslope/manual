@@ -25,3 +25,6 @@ ls folder1 | grep -v file1 | xargs cp folder2 (folder1 - Исходная, folde
 #
 Распаковка архива tar.gz
 tar -xvf /path/to/archive.tar.gz
+#
+Просмотр прав на файл
+ls -l file
