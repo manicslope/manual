@@ -24,7 +24,7 @@ ls folder1 | grep -v file1 | xargs cp folder2 (folder1 - Исходная, folde
 :%s/float(dmg)/dmg
 #
 Распаковка архива tar.gz
-tar -xvf /path/to/archive.tar.gz
+tar -xvf /path/to/archive.tar.gz -C /pathToUnpack
 #
 Просмотр прав на файл
 ls -l file
