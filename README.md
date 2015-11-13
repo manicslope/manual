@@ -28,3 +28,6 @@ tar -xvf /path/to/archive.tar.gz -C /pathToUnpack
 #
 Просмотр прав на файл
 ls -l file
+#
+Вывод надписи на экран(bash скрипт)
+notify-send "Your text here"
