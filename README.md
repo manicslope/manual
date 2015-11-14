@@ -31,3 +31,6 @@ ls -l file
 #
 Вывод надписи на экран(bash скрипт)
 notify-send "Your text here"
+#
+Подключение по ssh с использованием графического интерфейса
+ssh -X user@host
