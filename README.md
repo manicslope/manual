@@ -3,10 +3,6 @@
 #### Конфиг vim
 `/usr/share/vim/vimrc`
 
-#### Конфиг git
-`git config --global user.name "John Doe"`
-`git config --global user.email johndoe@example.com`
-
 
 #### Nmap Сканирование всех ip адресов в локальной сети
 `nmap -v -sP 192.168.1.3/24`
