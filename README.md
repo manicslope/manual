@@ -34,3 +34,6 @@
 
 #### Смена ip
 `sudo ifconfig wlp3s0 192.168.0.32 netmask 255.255.255.0`
+
+#### Базовая установка и настройка веб-сервера
+[http://help.ubuntu.ru/wiki/web-server](http://help.ubuntu.ru/wiki/web-server)
