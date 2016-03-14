@@ -40,3 +40,5 @@
 #### Подключение по ssh с использованием графического интерфейса
 `ssh -X user@host`
 
+####Настройка git
+'git config --global user.name "John Doe\ngit config --global user.email johndoe@example.com'
