@@ -37,3 +37,6 @@
 
 #### Базовая установка и настройка веб-сервера
 [http://help.ubuntu.ru/wiki/web-server](http://help.ubuntu.ru/wiki/web-server)
+
+#### Обновление flash в chrome
+`sudo apt-get install pepperflash-nonfree
