@@ -40,3 +40,6 @@
 
 #### Обновление flash в chrome
 `sudo apt-get install pepperflash-nonfree`
+
+#### Решение проблемы с пропаданием звука в vlc
+`http://forum.ubuntu.ru/index.php?topic=209711.0`
