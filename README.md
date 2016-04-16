@@ -39,7 +39,8 @@
 [http://help.ubuntu.ru/wiki/web-server](http://help.ubuntu.ru/wiki/web-server)
 
 #### Обновление flash в chrome
-`sudo apt-get install pepperflash-nonfree`
+	sudo apt-get install pepperflashplugin-nonfree
+	sudo update-pepperflashplugin-nonfree --install
 
 #### Решение проблемы с пропаданием звука в vlc
 `http://forum.ubuntu.ru/index.php?topic=209711.0`
