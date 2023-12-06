@@ -1,0 +1,9 @@
+# NTFS feature
+get-item -path file -stream *
+set-content -path file -stream showme
+get-item file | get-content -stream showme
+
+# Not tested
+# Find data streams
+gci -recurse | % { gi $_.FullName -stream * } | where stream -ne ':$Data'
+remove-item –path {path to the file} –stream {name of the stream}
