@@ -63,6 +63,9 @@
 ### Simple SQLi
 `' OR '1'='1' --`
 
+### SQL list
+https://github.com/payloadbox/sql-injection-payload-list.git
+
 ### NFS
 `showmount --exports 10.10.41.139`
 `mount 10.10.41.139:/opt/conf /media/nfs`
