@@ -93,4 +93,4 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 `gpg --output original_message.txt --decrypt message.gpg`
 
 ### Subdomains search (i.e. *(www|admin).site.com)
-ffuf -w /opt/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u http://FUZZ.site.com -fw 1
+`ffuf -w /opt/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u http://FUZZ.site.com -fw 1`
