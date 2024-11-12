@@ -95,5 +95,5 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 ### Subdomains search (i.e. *(www|admin).site.com)
 `ffuf -w /opt/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u http://FUZZ.site.com -fw 1`
 
-### Upgrade to bash [Read]([https://duckduckgo.com](https://0xffsec.com/handbook/shells/full-tty/))
+### Upgrade to bash ([READ](https://0xffsec.com/handbook/shells/full-tty/))
 `SHELL=/bin/bash script -q /dev/null`
