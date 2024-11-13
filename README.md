@@ -97,3 +97,6 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 
 ### Upgrade to bash ([READ](https://0xffsec.com/handbook/shells/full-tty/))
 `SHELL=/bin/bash script -q /dev/null`
+
+### Listen for ICMP activity
+`sudo tcpdump -i eth0 icmp`
