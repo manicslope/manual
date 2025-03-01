@@ -100,3 +100,6 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 
 ### Listen for ICMP activity
 `sudo tcpdump -i eth0 icmp`
+
+### exiftool privesc
+https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-exiftool-privilege-escalation/
