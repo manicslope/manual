@@ -103,3 +103,6 @@ https://github.com/payloadbox/sql-injection-payload-list.git
 
 ### exiftool privesc
 https://exploit-notes.hdks.org/exploit/linux/privilege-escalation/sudo/sudo-exiftool-privilege-escalation/
+
+### LFI; Ffuz
+ffuf -w /opt/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u http://10.10.169.167/?page=FUZZ
